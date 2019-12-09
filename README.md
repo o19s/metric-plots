@@ -4,7 +4,7 @@ For more information, see the accompanying blog post [Demystifying nDCG and ERR]
 
 ## Installation
 
-Clone this repo, then cd into its root directory, then run:
+Run the following from a command line to clone this repo, cd into its root directory, then make it available through a local python web server:
 
 ```bash
 git clone https://github.com/o19s/metric-plots
