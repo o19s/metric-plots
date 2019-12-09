@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Metric Plots</title>
+    <link rel="stylesheet" href="metrics.css">
+    <style type="text/css">
+      .container {width:1600px!important;height:800px!important;margin:0;padding:0;}
+      .tablify { border:1px solid black; }
+      th,td { border:1px solid black; padding: 2px; margin:0px; align:center; }
+      .grade_1 { background-color:rgb(244,204,177);}
+      .grade_2 { background-color:rgb(253,229,162);}
+      .grade_3 { background-color:rgb(192,215,253);}
+      .grade_4 { background-color:rgb(179,217,169);}
+      .score_black { color:black; }
+      .score_red { color:red; }
+      .score_blue { color:blue; }
+      .score_green { color:green; }
+      .score_purple { color:purple; }
+    </style>
+  </head>
+  <body>
+    <h1>Plots for <a href="?ndcg">nDCG</a> and <a href="?err">ERR</a></h1>
+    <div class="container">
+      <canvas id="MetricsChart" class="container"></canvas>
+    </div>
+    <table class="tablify">
+      <thead>
+        <tr>
+          <th colspan="4">Positions</th>
+          <th colspan="5">Discounted Scores</th>
+        </tr>
+        <tr>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>1/r^0.18</th>
+          <th>1/r^0.5</th>
+          <th>1/log2(r+1)</th>
+          <th>1/r</th>
+          <th>2/2^r</th>
+        </tr>
+      </thead>
+      <tbody id="data"></tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+    <script src="metrics.js"></script>
+  </body>
+</html>
